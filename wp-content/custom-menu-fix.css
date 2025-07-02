@@ -1,0 +1,164 @@
+/* Custom CSS to fix the white text on white background issue in the dropdown menu */
+
+/* Change the background color of the dropdown menu to black */
+.main-menu .main-menu__list li ul,
+.stricky-header .main-menu__list li ul {
+    background-color: #000000 !important; /* Black background */
+}
+
+/* Ensure text in dropdown menu is white for better visibility */
+.main-menu .main-menu__list li ul li > a,
+.stricky-header .main-menu__list li ul li > a {
+    color: #ffffff !important; /* White text */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Change hover state background to a dark gray for better contrast */
+.main-menu .main-menu__list li ul li.current > a,
+.main-menu .main-menu__list li ul li:hover > a,
+.stricky-header .main-menu__list li ul li.current > a,
+.stricky-header .main-menu__list li ul li:hover > a {
+    background-color: #333333 !important; /* Dark gray background on hover */
+    color: #ffffff !important; /* White text on hover */
+}
+
+/* Fix for dropdown visibility on hover */
+.main-menu .main-menu__list > li:hover > ul,
+.stricky-header .main-menu__list > li:hover > ul {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+}
+
+/* Ensure dropdown has proper styling */
+.main-menu .main-menu__list > li > ul,
+.stricky-header .main-menu__list > li > ul {
+    min-width: 200px !important;
+    background-color: #000000 !important;
+    border-radius: 0 !important;
+    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05) !important;
+    z-index: 9999 !important;
+}
+
+/* Additional fixes for specific menu items mentioned by the user */
+/* Team, Media Segment, Technical Segment, Public Relations Segment, 
+   Magazin Segment, Operation Segment, marketing Segment, Founders, 
+   Founders 2, Technical Research's, ABOUT */
+
+/* Target all submenu items to ensure they have black background */
+.main-menu .main-menu__list > li.menu-item-has-children > ul.sub-menu,
+.stricky-header .main-menu__list > li.menu-item-has-children > ul.sub-menu {
+    background-color: #000000 !important;
+    border: 1px solid #333333 !important;
+}
+
+/* Ensure all submenu items have white text */
+.main-menu .main-menu__list > li.menu-item-has-children > ul.sub-menu > li > a,
+.stricky-header .main-menu__list > li.menu-item-has-children > ul.sub-menu > li > a {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+}
+
+/* Fix for nested submenus if they exist */
+.main-menu .main-menu__list > li.menu-item-has-children > ul.sub-menu > li > ul.sub-menu,
+.stricky-header .main-menu__list > li.menu-item-has-children > ul.sub-menu > li > ul.sub-menu {
+    background-color: #000000 !important;
+    border: 1px solid #333333 !important;
+}
+
+/* Ensure nested submenu items have white text */
+.main-menu .main-menu__list > li.menu-item-has-children > ul.sub-menu > li > ul.sub-menu > li > a,
+.stricky-header .main-menu__list > li.menu-item-has-children > ul.sub-menu > li > ul.sub-menu > li > a {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+}
+
+/* Fix for mega menu if it exists */
+.main-menu .main-menu__list > li.megamenu > ul.sub-menu,
+.stricky-header .main-menu__list > li.megamenu > ul.sub-menu {
+    background-color: #000000 !important;
+}
+
+/* Ensure mega menu items have white text */
+.main-menu .main-menu__list > li.megamenu > ul.sub-menu > li > a,
+.stricky-header .main-menu__list > li.megamenu > ul.sub-menu > li > a {
+    color: #ffffff !important;
+}
+
+/* Fix for any template-main-menu class that might be used */
+nav.template-main-menu > ul.menu > li.menu-item > ul.sub-menu {
+    background-color: #000000 !important;
+}
+
+nav.template-main-menu > ul.menu > li.menu-item > ul.sub-menu > li.menu-item > a {
+    color: #ffffff !important;
+}
+
+/* Force visibility for all dropdown menus when hovered */
+.main-menu .main-menu__list li:hover > ul,
+.stricky-header .main-menu__list li:hover > ul,
+nav.template-main-menu > ul.menu > li.menu-item:hover > ul.sub-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+    transition: none !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+/* Additional fixes for Team button and other specific menu items */
+.main-menu .main-menu__list > li.menu-item-has-children.current-menu-ancestor > ul.sub-menu,
+.main-menu .main-menu__list > li.menu-item-has-children.current-menu-item > ul.sub-menu,
+.stricky-header .main-menu__list > li.menu-item-has-children.current-menu-ancestor > ul.sub-menu,
+.stricky-header .main-menu__list > li.menu-item-has-children.current-menu-item > ul.sub-menu {
+    background-color: #000000 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Ensure all menu items with class 'has-submenu' also have proper styling */
+.main-menu .main-menu__list > li.has-submenu > ul,
+.stricky-header .main-menu__list > li.has-submenu > ul {
+    background-color: #000000 !important;
+    border: 1px solid #333333 !important;
+}
+
+/* Ensure all menu items with class 'has-submenu' have white text */
+.main-menu .main-menu__list > li.has-submenu > ul > li > a,
+.stricky-header .main-menu__list > li.has-submenu > ul > li > a {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+}
+
+/* Fix for any custom dropdown classes that might be used */
+.dropdown-menu,
+.sub-menu,
+.submenu,
+.menu-item-has-children > ul {
+    background-color: #000000 !important;
+    border: 1px solid #333333 !important;
+}
+
+.dropdown-menu > li > a,
+.sub-menu > li > a,
+.submenu > li > a,
+.menu-item-has-children > ul > li > a {
+    color: #ffffff !important;
+    font-weight: 500 !important;
+}
+
+/* Ensure z-index is high enough to display above other elements */
+.main-menu .main-menu__list li ul,
+.stricky-header .main-menu__list li ul,
+.dropdown-menu,
+.sub-menu,
+.submenu {
+    z-index: 9999 !important;
+}
