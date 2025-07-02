@@ -1,0 +1,33 @@
+/* Custom CSS to fix submenu visibility issue */
+
+/* Change submenu background to black and text to white for better visibility */
+nav.template-main-menu > ul.menu > li.menu-item > ul.sub-menu {
+    background-color: #000000 !important;
+}
+
+nav.template-main-menu > ul.menu > li.menu-item > ul.sub-menu > li.menu-item > a {
+    color: #ffffff !important;
+}
+
+nav.template-main-menu > ul.menu > li.menu-item > ul.sub-menu > li.menu-item:hover > a,
+nav.template-main-menu > ul.menu > li.menu-item > ul.sub-menu > li.menu-item.active > a {
+    color: #EE0034 !important; /* Keep the hover color as red */
+}
+
+/* Also fix second level submenus if they exist */
+nav.template-main-menu > ul.menu > li.menu-item > ul.sub-menu > li.menu-item.second-lavel > ul.sub-menu {
+    background-color: #000000 !important;
+}
+
+nav.template-main-menu > ul.menu > li.menu-item > ul.sub-menu > li.menu-item.second-lavel > ul.sub-menu > li.menu-item > a {
+    color: #ffffff !important;
+}
+
+/* Fix mega menu submenus if they exist */
+nav.template-main-menu > ul.menu > li.menu-item.mega-menu > ul.sub-menu > .menu-item > .sub-menu {
+    background-color: #000000 !important;
+}
+
+nav.template-main-menu > ul.menu > li.menu-item.mega-menu > ul.sub-menu > .menu-item > .sub-menu > li.menu-item > a {
+    color: #ffffff !important;
+}

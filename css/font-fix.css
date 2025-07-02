@@ -1,0 +1,38 @@
+/* Font Fix CSS for Vercel Deployment */
+
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Import Manrope font */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* Import Barlow Condensed font */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&display=swap');
+
+/* Ensure font consistency */
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apply Manrope to elements using the nisoz-font variable */
+:root {
+  --nisoz-font: "Manrope", sans-serif;
+  --heading-font: "Barlow Condensed", sans-serif;
+}
+
+/* Force Roboto on specific elements */
+p, span, div, li, a {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Force Manrope on headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "IBM Plex Sans", "Manrope", sans-serif;
+}
+
+/* Ensure font loading doesn't cause layout shifts */
+* {
+  font-display: swap;
+}

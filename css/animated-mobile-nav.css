@@ -1,0 +1,141 @@
+/* Animated Mobile Navigation Button Styles */
+
+/* Hamburger Button Container */
+.hamburger-menu {
+  position: relative;
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+/* Show hamburger menu on mobile devices */
+@media (max-width: 991px) {
+  .hamburger-menu {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  /* Hide desktop menu on mobile */
+  .main-menu__nav {
+    display: none;
+  }
+}
+
+/* Hamburger Box and Inner */
+.hamburger-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 100%;
+  height: 3px;
+  background-color: #0066cc;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/* Spin Animation */
+.hamburger-menu.active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger-menu.active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburger-menu.active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Add a subtle hover effect */
+.hamburger-menu:hover .hamburger-inner,
+.hamburger-menu:hover .hamburger-inner::before,
+.hamburger-menu:hover .hamburger-inner::after {
+  background-color: #0099ff;
+}
+
+/* Add a pulse animation when menu is closed */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hamburger-menu:not(.active):hover {
+  animation: pulse 0.5s ease-in-out;
+}
+
+/* Mobile Menu Overlay Animation */
+.mobile-nav__overlay {
+  transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+/* Enhanced animation for mobile menu content */
+.mobile-nav__content {
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.mobile-nav__wrapper.expanded .mobile-nav__content {
+  transform: translateX(0);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Smooth fade-in for mobile menu items */
+.mobile-nav__wrapper.expanded .mobile-menu__list li {
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: calc(0.1s * var(--item-index, 0));
+  opacity: 0;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
