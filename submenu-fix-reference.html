@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submenu Fix Reference</title>
+    
+    <!-- Include the custom menu fix CSS directly -->
+    <link rel="stylesheet" href="wp-content/custom-menu-fix.css" type="text/css" media="all">
+    
+    <!-- Include the JavaScript loader that ensures the CSS is loaded on all pages -->
+    <script src="wp-content/custom-menu-fix-loader.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .note {
+            background-color: #ffffd9;
+            border-left: 4px solid #e7dc8c;
+            padding: 15px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Submenu Fix Implementation Reference</h1>
+    
+    <p>This page serves as a reference for implementing the submenu fix across all pages of the NCTU Petroleum Tech website.</p>
+    
+    <div class="note">
+        <strong>Note:</strong> The submenu visibility issue has been fixed by applying a custom CSS file that changes the background color of dropdown menus to black and text color to white for better visibility.
+    </div>
+    
+    <h2>Implementation Methods</h2>
+    
+    <h3>Method 1: Direct CSS Inclusion</h3>
+    <p>Add the following line in the <code>&lt;head&gt;</code> section of each HTML file:</p>
+    <pre>&lt;link rel="stylesheet" href="wp-content/custom-menu-fix.css" type="text/css" media="all"&gt;</pre>
+    <p>For pages in subdirectories, adjust the path accordingly:</p>
+    <pre>&lt;link rel="stylesheet" href="../wp-content/custom-menu-fix.css" type="text/css" media="all"&gt;</pre>
+    
+    <h3>Method 2: JavaScript Loader</h3>
+    <p>Include the JavaScript loader in the <code>&lt;head&gt;</code> section of each HTML file:</p>
+    <pre>&lt;script src="wp-content/custom-menu-fix-loader.js"&gt;&lt;/script&gt;</pre>
+    <p>This script will automatically check if the CSS is already loaded and add it if necessary.</p>
+    
+    <h3>Method 3: WordPress Theme Integration</h3>
+    <p>If you have access to the WordPress theme files, you can add the CSS to the theme's style.css file or include it via functions.php.</p>
+    
+    <h2>Files Created</h2>
+    <ul>
+        <li><strong>wp-content/custom-menu-fix.css</strong> - The main CSS file with all the fixes</li>
+        <li><strong>wp-content/custom-menu-fix-loader.js</strong> - JavaScript to dynamically load the CSS</li>
+        <li><strong>wp-content/themes/nisoz/style-submenu-fix.css</strong> - Theme-specific version of the fix</li>
+    </ul>
+    
+    <h2>Testing</h2>
+    <p>After implementing the fix, test the following menu items to ensure proper visibility:</p>
+    <ul>
+        <li>Team</li>
+        <li>Media Segment</li>
+        <li>Technical Segment</li>
+        <li>Public Relations Segment</li>
+        <li>Magazin Segment</li>
+        <li>Operation Segment</li>
+        <li>Marketing Segment</li>
+        <li>Founders</li>
+        <li>Founders 2</li>
+        <li>Technical Research's</li>
+        <li>ABOUT</li>
+    </ul>
+</body>
+</html>
